@@ -339,7 +339,7 @@ TW_HAS_EDL_MODE       := false
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone45/temp"
 TW_BACKUP_EXCLUSIONS  := /data/fonts
-TW_DEVICE_VERSION     := POCO_F8_Ultra
+TW_DEVICE_VERSION     := REDMI_K90_Pro_Max
 
 #Toybox
 TW_USE_TOOLBOX := true

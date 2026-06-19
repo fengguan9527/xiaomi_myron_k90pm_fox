@@ -30,10 +30,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # 配置硬件信息
 $(call inherit-product, device/xiaomi/myron/device.mk)
 
+#TWRP/OrangeFox特有的配置
+$(call inherit-product, device/xiaomi/myron/fox_myron.mk)
+
 PRODUCT_DEVICE       := myron
 PRODUCT_NAME         := twrp_myron
 PRODUCT_BRAND        := Xiaomi
-PRODUCT_MODEL        := POCO F8 Ultra
+PRODUCT_MODEL        := REDMI K90 Pro Max
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

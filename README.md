@@ -35,7 +35,7 @@ mka recoveryimage
 震动 ❌  
 解密Data ✅  
 MTP ✅  
-安装KernelSU(不支持SukiSU和KernelSU Next，需要的可修改vendorsetup.sh后自行构建) ✅  
+安装KernelSU(不支持SukiSU和KernelSU Next，需要的可修改fox_myron.mk后自行构建) ✅  
 手电筒 ✅  
 WIFI ❌  
 
