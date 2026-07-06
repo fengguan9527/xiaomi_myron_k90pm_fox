@@ -238,8 +238,8 @@ TW_DEFAULT_BRIGHTNESS    := 1200
 TW_MAX_BRIGHTNESS        := 4094
 TW_NO_SCREEN_BLANK  := true
 TW_SCREEN_BLANK_ON_BOOT  := true
-TW_Y_OFFSET              := 141
-TW_H_OFFSET              := -141
+TW_Y_OFFSET              := 0
+TW_H_OFFSET              := 0
 TW_STATUS_ICONS_ALIGN    := center
 
 
