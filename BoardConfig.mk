@@ -309,9 +309,7 @@ TW_LOAD_PREBUILT_MODULES_AT_FIRST  := true
 # placed in recovery/root/odm/lib64/ + LD_LIBRARY_PATH updated in service RC
 
 #TW_SUPPORT_INPUT_AIDL_HAPTICS                      := true
-#禁用震动
-TW_EXCLUDE_VIBRATOR := true
-TW_EXCLUDE_HAPTICS := true
+
 
 
 TW_NO_LEGACY_PROPS          := true
