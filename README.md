@@ -4,3 +4,7 @@ haohao3001 - 维护者
 recovery/root下的大部分二进制文件参考自 變換風雲@coolapk 的TWRR
 
 ## 在此基础上进行一些个人修改
+移除挖孔屏刘海
+
+## 构建
+Github构建:https://github.com/fengguan9527/OrangeFox-Action-Builder
