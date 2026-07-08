@@ -385,7 +385,7 @@ TW_USE_BATTERY_SYSFS_STATS    := true
 TW_POWER_SUPPLY_BATTERY_PATH  := "/sys/class/power_supply/battery"
 
 # 定义时区
-TW_DEFAULT_TIMEZONE           := \"Asia/Shanghai\"
+TW_DEFAULT_TIMEZONE           := Asia/Shanghai
 
 # ─────────────────────────────────────────────────────────
 # 调试工具
