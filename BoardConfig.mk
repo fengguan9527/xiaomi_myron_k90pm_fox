@@ -384,8 +384,8 @@ TW_USE_BATTERY_SYSFS_STATS    := true
 # myron: mca_business_battery 驱动在平台特定路径下暴露电池信息
 TW_POWER_SUPPLY_BATTERY_PATH  := "/sys/class/power_supply/battery"
 
-# 【修复核心错误】：去除外层双引号，让 OrangeFox 构建脚本能正确为其追加宏包装
-TW_DEFAULT_TIMEZONE           := Asia/Shanghai
+# 定义时区
+TW_DEFAULT_TIMEZONE           := \"Asia/Shanghai\"
 
 # ─────────────────────────────────────────────────────────
 # 调试工具
