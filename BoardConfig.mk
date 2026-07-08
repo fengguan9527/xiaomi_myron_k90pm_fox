@@ -331,9 +331,9 @@ TW_NO_SCREEN_BLANK  := true
 # 启动时先黑屏再显示
 TW_SCREEN_BLANK_ON_BOOT  := true
 # Y 轴偏移量：141 像素（为状态栏/刘海留出空间）
-TW_Y_OFFSET              := 141
+# TW_Y_OFFSET              := 141
 # 高度偏移量：-141 像素（减去状态栏高度）
-TW_H_OFFSET              := -141
+# TW_H_OFFSET              := -141
 # 状态栏图标居中对齐
 TW_STATUS_ICONS_ALIGN    := center
 
