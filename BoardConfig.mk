@@ -279,7 +279,7 @@ TW_USE_FSCRYPT_POLICY            := 2
 # 安全补丁绕过（抗回滚 workaround）
 # 已验证: version-os=99.87.36 (fastboot), ro.build.version.release=99.87.36 (getprop)
 # 将平台版本设为极高值 99.87.36，绕过版本降级检查
-PLATFORM_VERSION             := 99.87.36
+PLATFORM_VERSION              := 99.87.36
 # 上一个稳定平台版本
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 # 安全补丁日期设为 2099-12-31，永远是最新的补丁级别
@@ -303,7 +303,7 @@ TW_INCLUDE_FASTBOOTD         := true
 # 跳过额外的 fstab 文件（只使用 recovery.fstab）
 TW_SKIP_ADDITIONAL_FSTAB     := true
 # 追加 system.prop 中的系统属性到构建
-TARGET_SYSTEM_PROP           += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP          += $(DEVICE_PATH)/system.prop
 
 # ─────────────────────────────────────────────────────────
 # 显示配置
@@ -337,8 +337,6 @@ TW_H_OFFSET              := -141
 # 状态栏图标居中对齐
 TW_STATUS_ICONS_ALIGN    := center
 
-
-
 # ─────────────────────────────────────────────────────────
 # 存储配置
 # 已验证: RECOVERY_SDCARD_ON_DATA — sdcard 挂载自 /data/media
@@ -367,7 +365,7 @@ TW_INCLUDE_7ZA          := true
 # 包含 libresetprop（修改系统属性）
 TW_INCLUDE_LIBRESETPROP := true
 # 包含 lpdump（查看动态分区布局）
-TW_INCLUDE_LPDUMP       := true
+TW_INCLUDE_LPDUMP        := true
 # 包含 lptools（创建/管理动态分区）
 TW_INCLUDE_LPTOOLS      := true
 # 包含 repacktools（重新打包 boot/recovery 镜像）
@@ -384,11 +382,10 @@ TW_USE_DMCTL            := true
 # 启用电池 sysfs 统计信息读取
 TW_USE_BATTERY_SYSFS_STATS    := true
 # myron: mca_business_battery 驱动在平台特定路径下暴露电池信息
-# 已从 logcat AVC audit 确认: soc:mca_business_battery/power_supply/battery/capacity
-# 短路径 /sys/class/power_supply/battery 是内核自动创建的符号链接 → OK
 TW_POWER_SUPPLY_BATTERY_PATH  := "/sys/class/power_supply/battery"
-# 默认时区：亚洲/上海（东八区）
-TW_DEFAULT_TIMEZONE           := "Asia/Shanghai"
+
+# 【修复核心错误】：去除外层双引号，让 OrangeFox 构建脚本能正确为其追加宏包装
+TW_DEFAULT_TIMEZONE           := Asia/Shanghai
 
 # ─────────────────────────────────────────────────────────
 # 调试工具
@@ -418,29 +415,15 @@ TW_LOAD_PREBUILT_MODULES_AT_FIRST  := true
 
 # ─────────────────────────────────────────────────────────
 # 振动器 (cs40l26 haptics 驱动)
-# 已从 odm vintf manifest 确认:
-#   vendor.xiaomi.hardware.vibratorfeature.service.xml
-#   fqname: IVibrator/vibratorfeature
-# 已从 getprop 确认:
-#   ro.odm.mm.vibrator.sys_path=/sys/class/qcom-haptics
-#   ro.odm.mm.vibrator.device_type=agm
-#   ro.odm.mm.vibrator.resonant_frequency=170
 # ─────────────────────────────────────────────────────────
-# 振动 AIDL — 所需库从 /system/lib64/ 提取
-# (android.hardware.vibrator-V1-ndk.so + libxml2.so)
-# 放置于 recovery/root/odm/lib64/ + LD_LIBRARY_PATH 已更新
-
-#TW_SUPPORT_INPUT_AIDL_HAPTICS                      := true
 # 禁用振动（因为 recovery 中 vibratorfeature 服务不可用）
 TW_EXCLUDE_VIBRATOR := true
 # 禁用触觉反馈
 TW_EXCLUDE_HAPTICS := true
 
-
 # 不使用旧版属性系统
-TW_NO_LEGACY_PROPS          := true
-# 延长电池路径等待时间: mca_business_battery 驱动需要约 1.7 秒来探测 (dmesg)
-# 8 秒有足够余量，即使 ADSP 启动稍慢也能确保电池就绪
+TW_NO_LEGACY_PROPS           := true
+# 延长电池路径等待时间
 TW_BATTERY_SYSFS_WAIT_SECONDS := 8
 
 # ─────────────────────────────────────────────────────────
@@ -448,11 +431,9 @@ TW_BATTERY_SYSFS_WAIT_SECONDS := 8
 # ─────────────────────────────────────────────────────────
 # 支持多语言
 TW_EXTRA_LANGUAGES    := true
-# 默认语言：简体中文
+# 默认 language：简体中文
 TW_DEFAULT_LANGUAGE   := zh_CN
-# 输入设备黑名单（防止 OrangeFox 轮询非触控设备导致卡顿）
-# qcom-hv-haptics: 仅支持力反馈协议，无触控事件，会导致轮询阻塞
-# uinput-xiaomi:   虚拟按键设备，不是真正的触摸屏
+# 输入设备黑名单
 TW_INPUT_BLACKLIST    := "hbtp_vm:qcom-hv-haptics:uinput-xiaomi"
 # 排除 APEX 包（recovery 不需要）
 TW_EXCLUDE_APEX       := true
@@ -468,9 +449,6 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone45/temp"
 TW_BACKUP_EXCLUSIONS  := /data/fonts
 # 设备版本标识
 TW_DEVICE_VERSION     := REDMI_K90_Pro_Max
-
-# 使用 Toybox 作为 recovery shell 工具集
-TW_USE_TOOLBOX := true
 
 # 解密 Data 分区
 # 包含 OMAPI (Open Mobile API) 支持，用于与 SE (安全元件) 通信
