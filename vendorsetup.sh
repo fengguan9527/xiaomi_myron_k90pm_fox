@@ -94,6 +94,8 @@ export FOX_ALLOW_EARLY_SETTINGS_LOAD=1
 export FOX_ENABLE_KERNELSU_SUPPORT=1
 # 启用 KernelSU Next 安装支持
 export FOX_ENABLE_KERNELSU_NEXT_SUPPORT=1
+# 启用 sukisu ultra 安装支持
+export FOX_ENABLE_SUKISU_SUPPORT=1
 
 # ─── 显示 / 刘海处理 ────────────────────────────────────────────────────────
 # 隐藏挖孔屏/刘海：强制状态栏绘制纯黑背景（fox_16.0 可能仅在 shell 环境变量中生效）
