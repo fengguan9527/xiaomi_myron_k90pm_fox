@@ -40,3 +40,6 @@ ro.boot.bootdevice=1d84000.ufshc
 # Keymint
 ro.hardware.keystore_desede=true
 ro.build.fingerprint=Redmi/myron/myron:16/BQ2A.250705.001-BP2A.250605.031.A3/OS3.0.303.0.WPMCNXM:user/release-keys
+
+# DPI
+ro.sf.lcd_density=400
