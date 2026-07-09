@@ -214,12 +214,13 @@ BOOT_SECURITY_PATCH          := $(PLATFORM_SECURITY_PATCH)
 # ─────────────────────────────────────────────────────────
 # Recovery
 # ─────────────────────────────────────────────────────────
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-TARGET_RECOVERY_FSTAB        := $(DEVICE_PATH)/recovery.fstab
-TW_INCLUDE_FASTBOOTD         := true
-TW_SKIP_ADDITIONAL_FSTAB     := true
-TARGET_SYSTEM_PROP           += $(DEVICE_PATH)/system.prop
+TARGET_RECOVERY_PIXEL_FORMAT  := RGBX_8888
+TARGET_RECOVERY_QCOM_RTC_FIX  := true
+TARGET_RECOVERY_FSTAB         := $(DEVICE_PATH)/recovery.fstab
+TW_INCLUDE_FASTBOOTD          := true
+TW_SKIP_ADDITIONAL_FSTAB      := false
+TARGET_SYSTEM_PROP            += $(DEVICE_PATH)/system.prop
+TW_ENABLE_ALL_PARTITION_TOOLS := true
 
 # ─────────────────────────────────────────────────────────
 # Display
