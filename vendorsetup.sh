@@ -80,6 +80,3 @@ export OF_MAINTAINER="haohao3001@github"
 # ─── Magisk ───────────────────────────────────────────────────────────────────
 export OF_MAGISK="/tmp/misc/Magisk.zip"
 export FOX_USE_SPECIFIC_MAGISK_ZIP="/tmp/misc/Magisk.zip"
-
-export OF_HIDE_NOTCH=1
-export OF_STATUS_H=141
