@@ -218,9 +218,8 @@ TARGET_RECOVERY_PIXEL_FORMAT  := RGBX_8888
 TARGET_RECOVERY_QCOM_RTC_FIX  := true
 TARGET_RECOVERY_FSTAB         := $(DEVICE_PATH)/recovery.fstab
 TW_INCLUDE_FASTBOOTD          := true
-TW_SKIP_ADDITIONAL_FSTAB      := false
+TW_SKIP_ADDITIONAL_FSTAB      := true
 TARGET_SYSTEM_PROP            += $(DEVICE_PATH)/system.prop
-TW_ENABLE_ALL_PARTITION_TOOLS := true
 
 # ─────────────────────────────────────────────────────────
 # Display
@@ -240,7 +239,7 @@ TW_MAX_BRIGHTNESS        := 4094
 TW_NO_SCREEN_BLANK  := true
 TW_SCREEN_BLANK_ON_BOOT  := true
 TW_Y_OFFSET              := 0
-TW_H_OFFSET              := 268
+TW_H_OFFSET              := 275
 TW_STATUS_ICONS_ALIGN    := center
 
 
