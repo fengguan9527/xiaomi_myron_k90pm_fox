@@ -19,6 +19,7 @@ ro.virtual_ab.enabled=true
 ro.virtual_ab.compression.enabled=true
 
 # USB — confirmed from /proc/bootconfig: androidboot.usbcontroller=a600000.dwc3
+sys.usb.configfs=1
 ro.recovery.usb.vid=18D1
 ro.recovery.usb.adb.pid=D001
 ro.recovery.usb.fastboot.pid=4EE0
@@ -31,6 +32,8 @@ vendor.gatekeeper.is_security_level_spu=0
 # Display
 ro.minui.pixel_format=RGBX_8888
 ro.minui.overscan_percent=0
+# DPI
+ro.sf.lcd_density=400
 
 # Fuse passthrough — confirmed getprop
 persist.sys.fuse.passthrough.enable=true
