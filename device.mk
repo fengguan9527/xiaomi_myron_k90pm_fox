@@ -41,3 +41,6 @@ PRODUCT_PACKAGES += \
 # ─── Release key ──────────────────────────────────────────────────────────────
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/releasekey
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/clear_avb.zip:recovery/root/Fox/fox_modules/clear_avb.zip
