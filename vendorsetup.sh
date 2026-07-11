@@ -73,7 +73,7 @@ export FOX_SPR=1
 
 # ─── Maintainer / variant ─────────────────────────────────────────────────────
 export FOX_BUILD_DEVICE="myron"
-export FOX_VARIANT="Xiaomi_myron_K90_ProMax"
+export FOX_VARIANT="Xiaomi_REDMI_K90_ProMax"
 export FOX_MAINTAINER_PATCH_VERSION=$(date +%y%m%d)
 export OF_MAINTAINER="haohao3001@github"
 
