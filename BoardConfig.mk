@@ -241,7 +241,7 @@ TW_SCREEN_BLANK_ON_BOOT  := true
 TARGET_SCREEN_WIDTH      := 1200
 TARGET_SCREEN_HEIGHT     := 2608
 TW_Y_OFFSET              := 0
-TW_H_OFFSET              := 268
+TW_H_OFFSET              := 0
 TW_STATUS_ICONS_ALIGN    := center
 
 
