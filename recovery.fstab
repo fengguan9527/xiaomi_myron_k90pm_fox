@@ -29,4 +29,6 @@ mi_ext                                                  /mi_ext              ero
 /dev/block/bootdevice/by-name/vbmeta_system_b           /vbmeta_system_b     emmc    defaults                                                                                                  defaults
 /dev/block/bootdevice/by-name/recovery_a                /recovery            emmc    defaults                                                                                                  defaults
 /dev/block/bootdevice/by-name/recovery_b                /recovery_b          emmc    defaults                                                                                                  defaults
+/dev/block/bootdevice/by-name/abl_a                     /abl                 emmc    defaults                                                                                                  defaults
+/dev/block/bootdevice/by-name/abl_b                     /abl_b               emmc    defaults                                                                                                  defaults
 /devices/platform/soc/a600000.ssusb/*.dwc3/xhci-hcd.*.auto*  /usbotg        auto    nosuid,nodev                                                                                               wait,voldmanaged=usbotg:auto
