@@ -1,0 +1,14 @@
+diff --git a/gui/action.cpp b/gui/action.cpp
+index d65ef7bb..cf3a18cc 100644
+--- a/gui/action.cpp
++++ b/gui/action.cpp
+@@ -1390,8 +1390,7 @@ int GUIAction::screenshot(std::string arg) {
+ 	uid_t uid = AID_MEDIA_RW;
+ 	gid_t gid = AID_MEDIA_RW;
+ 
+-	strcpy(path, Fox_Home.c_str());
+-	strcat(path, "/screenshots/");
++	strcpy(path, "/sdcard/Pictures/OrangeFox/");
+ 
+ 	if (!TWFunc::Create_Dir_Recursive(path, 0775, uid, gid)) {
+ 		strcpy(path, "/tmp/");
