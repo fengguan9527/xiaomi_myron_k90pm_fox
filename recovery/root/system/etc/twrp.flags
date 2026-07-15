@@ -27,6 +27,7 @@
 /vbmeta          emmc     /dev/block/bootdevice/by-name/vbmeta        flags=display="Vbmeta";backup=1;flashimg=1;slotselect
 /vbmeta_system   emmc     /dev/block/bootdevice/by-name/vbmeta_system flags=display="Vbmeta_System";backup=1;flashimg=1;slotselect
 /misc            emmc     /dev/block/bootdevice/by-name/misc          flags=display="Misc";backup=1;flashimg=1
+/abl             emmc     /dev/block/bootdevice/by-name/abl           flags=display="ABL";backup=1;flashimg=1;slotselect
 
 # Critical firmware / calibration partitions
 # Backup allowed where useful; no wipe flags.
